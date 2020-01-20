@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    int size;
+    scanf("%d",&size);      //taking array size as input
+    int arr[size];
+    int i;
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);    //array elements
+    }
+    printf("Unsorted array is :");
+    for(i=0;i<size;i++)
+        printf("%d ",arr[i]);
+    printf("\n");
+        
+    int key;
+    int j;
+    for(i=1;i<size;i++)
+    {
+        key=arr[i];
+        for(j=i-1;j>=0;j--)
+        {
+            if(key<arr[j])
+                arr[j+1]=arr[j];
+            else
+                break;
+        }
+        arr[j+1]=key;
+    }
+    printf("Sorted array is :");
+    for(i=0;i<size;i++)
+        printf("%d ",arr[i]);
+    return 0;
+}
