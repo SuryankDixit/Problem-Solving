@@ -1,17 +1,25 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+typedef unsigned long long int ll;
+
 int main()
 {
-    int n,temp;
-    cout<<"Enter the size of array :";
-    cin>>n;
-    int *arr=new int[n];
-    cout<<"Enter elements in the array to sort :";
-    for(int i=0;i<n;i++)
-        cin>>arr[i];
-    for(int i=0;i<n;i++)
+    ll n,temp;
+    scanf("%llu",&n);
+    ll arr[n];
+    srand(time(0)); 
+    for(ll i=0;i<n;i++)
+        arr[i]=rand()%1100000;
+        
+    //  using clock for time :
+    clock_t t; 
+    t = clock(); 
+    
+    for(ll i=0;i<n;i++)
     {
-        for(int j=0;j<n-1-i;j++)
+        for(ll j=0;j<n-1-i;j++)
         {
             if(arr[j]>arr[j+1])
             {
@@ -22,7 +30,11 @@ int main()
         }
         
     }
-    cout<<"Sorted array is : \n";
-    for(int i=0;i<n;i++)
-    cout<<arr[i]<<" ";
+    t = clock() - t; 
+    double time_taken = ((double)t)/CLOCKS_PER_SEC;
+    
+    printf("%f\n", time_taken);
+    
+    //for(ll i=0;i<n;i++)
+    //printf("%llu ",arr[i]);
 }
