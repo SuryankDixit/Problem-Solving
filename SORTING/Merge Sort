@@ -6,10 +6,24 @@ void merge_sort(int arr[],int l,int r);
 
 int main()
 {
-    int arr[10]={10,9,8,7,6,5,4,3,2,1};
-    merge_sort(arr,0,9);
-    for(int x=0;x<10;x++)
-    cout<<arr[x]<<" ";
+    int n;
+    cin>>n;
+    int arr[n];
+    srand(time(0));
+    for(int i=0;i<n;i++)
+    arr[i]=rand()%100;
+    
+    clock_t t; 
+    t = clock();
+    
+    merge_sort(arr,0,n-1);
+    
+    t = clock() - t; 
+    double time_taken = ((double)t)/CLOCKS_PER_SEC;
+    printf("Time taken : %f\n", time_taken);
+    
+    //for(int x=0;x<n;x++)
+    //cout<<arr[x]<<" ";
     return 0;
 }
 
