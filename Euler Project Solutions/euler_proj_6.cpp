@@ -1,5 +1,4 @@
-
-
+//Euler Project solution 6
 
 #include <iostream>
 #include <cmath>
