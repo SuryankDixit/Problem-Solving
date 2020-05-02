@@ -1,3 +1,6 @@
+// given linked list 1->2->3->4->5
+// output should be=> 2->1->4->3->5 
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
