@@ -1,3 +1,5 @@
+//GCD AND LCM OF NUMBERS
+
 #include <iostream>
 using namespace std;
 typedef long long int ll;

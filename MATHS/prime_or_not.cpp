@@ -1,3 +1,5 @@
+//Check Whether a number is prime or not
+
 #include <iostream>
 #include<cmath>
 
