@@ -8,4 +8,4 @@
 5. Cirular array next greater element;
 6. Stock span problem;
 
-All these problems are based on single concept which checks the next eement with the top element of the stack and takes decision.
+All these problems are based on single concept which checks the next element with the top element of the stack and takes decision.
