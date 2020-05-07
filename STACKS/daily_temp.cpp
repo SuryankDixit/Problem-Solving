@@ -4,7 +4,7 @@ class Solution {
 public:
     vector<int> dailyTemperatures(vector<int>& T) {
         
-        // variation of next greater element in right.
+        // variation of next greater element in right .
         stack<int> s;
         //vector<int> res(T.size());
         s.push(0);
