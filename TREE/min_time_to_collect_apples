@@ -1,0 +1,47 @@
+/*
+1443. Minimum Time to Collect All Apples in a Tree
+Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,true,true,false]
+Output: 8 
+*/
+
+class Solution {
+public:
+    list<int> *adjList;
+    
+    void graph(int V){
+        adjList=new list<int>[V];
+    }
+    
+    void add_edge(int u,int v){
+        adjList[u].push_back(v);
+        adjList[v].push_back(u);
+    }
+    
+    int dfs(int v,vector<bool> &visited, vector<bool> &hasApple)
+    {
+        if(visited[v])
+            return 0;
+        visited[v]=true;
+        int time=0;
+        for(auto i=adjList[v].begin();i!=adjList[v].end();i++)
+            time+=dfs(*i,visited,hasApple);
+        if(time==0 && hasApple[v]==false)
+            return 0;
+        return time+2;
+    }
+    
+    int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple) {
+        
+        int V=hasApple.size();
+        graph(V);
+        for(int i=0;i<edges.size();i++)
+            add_edge(edges[i][0],edges[i][1]);
+        
+        vector<bool> visited(V,false); 
+        int ans=dfs(0,visited,hasApple);
+        
+        if(ans==0)
+            return ans;
+        return ans-2;
+    }
+};
