@@ -17,7 +17,7 @@ public:
     //DISJOINT SET
 
     int findSet(int x,vector<int> &parent){
-        if(parent[x]==-1)
+        if(parent[x]==x)
             return x;
         else
             return parent[x] = findSet(parent[x],parent);       // approximate O(logn)
@@ -39,13 +39,13 @@ public:
 
         vector<int> parent(V);
         for(int i=0;i<V;i++)
-            parent[i]=-1;
+            parent[i]=i;
 
         for(auto edge: edgeList){
             bool status = unionSet(edge.first,edge.second,parent);
             if(status)
                 return true;
-            }
+        }
         return false;
     }
 
@@ -85,4 +85,3 @@ int main() {
 //1 3
 //3 4
 //4 5
-
