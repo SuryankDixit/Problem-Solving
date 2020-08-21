@@ -17,27 +17,27 @@ public:
     //DISJOINT SET
 
     int findSet(int x,vector<int> &parent){                 // PATH COMPRESSION
-        if(parent[x]==-1)
+        if(parent[x]==x)
             return x;
         else
             return parent[x] = findSet(parent[x],parent);       // approximate O(logn)
     }
 
-    bool unionSet(int x,int y,vector<int> &parent,vector<int> & rank){              // UNION BY RANK 
+    bool unionSet(int x,int y,vector<int> &parent,vector<int> & rank){              // UNION BY RANK
 
         int s1 = findSet(x,parent);
         int s2 = findSet(y,parent);
 
-        if(rank[s1]>rank[s2]){
-            parent[s2]=s1;
-            rank[s1] +=rank[s2];
+        if(s1!=s2) {
+            if (rank[s1] > rank[s2]) {
+                parent[s2] = s1;
+                rank[s1] += rank[s2];
+            } else {
+                parent[s1] = s2;
+                rank[s2] += rank[s1];
+            }
             return false;
-        }
-        else if(rank[s2]>rank[s1]){
-            parent[s1]=s2;
-            rank[s2]+=rank[s1];
-            return false;
-        }                                                       // Complexity O(n)
+        }                                       // Complexity O(n)
         return true;
     }
 
@@ -46,7 +46,7 @@ public:
         vector<int> parent(V);
         vector<int> rank(V);
         for(int i=0;i<V;i++) {
-            parent[i] = -1;
+            parent[i] = i;
             rank[i]=1;
         }
 
