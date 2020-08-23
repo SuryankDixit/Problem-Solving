@@ -5,6 +5,7 @@ template <typename T>
 class Graph{
     int V;
     unordered_map<T,list<pair<T,int>>> adjList;
+     // hashmap of visited nodes and min distance of that node from source
 public:
     explicit Graph(int n){
         V=n;
@@ -26,30 +27,40 @@ public:
     }
 
     int dijkstra(T source, T destination){
-
-        // hashmap of visited nodes and min distance of that node from source
+        
         unordered_map<T,int> visited;
-        for(auto node: adjList){
-            visited[node.first] = INT_MAX;
-        }
+        
+        // use this initialization whether graph is directed or undirected;
+        for(int i=1;i<=V;i++)
+            visited[i]=INT_MAX;
+        //  for(auto x:visited){
+        //     cout<<x.first<<" "<<x.second<<endl;
+        // }
         // Taking a set that will act as a priority queue:
         set<pair<int,T>> q;                 // distance , node
         q.insert({0,source});
+        visited[source]=0;
+        
+        // vector<int> v(V,0);
 
         while(!q.empty()){
             auto p = *(q.begin());       // holds the node with the least distance of all the nodes and edges
             int parentDistance = p.first;
             int parentNode = p.second;
-
+            
+            // cout<<parentNode<<"==>"<<parentDistance<<"  ";
+            
             q.erase(q.begin());
-            visited[parentNode] = parentDistance;
+            // v[parentNode]=1;
 
             for(auto nodePair: adjList[parentNode]){
                 T childNode = nodePair.first;
                 int childDistance = nodePair.second;
                 int newChildDistance = childDistance+parentDistance;
+                // cout<<childNode<<"=> "<<childDistance<<" "<<newChildDistance<<" "<<visited[childNode]<<",";
                 if( newChildDistance < visited[childNode] ){
                     visited[childNode] = newChildDistance;
+                    // cout<<childNode<<" =>"<<newChildDistance<<",";
                     auto f =q.find(make_pair(childDistance,childNode));
                     if(f!=q.end()) {
                         q.erase(f);
@@ -60,54 +71,36 @@ public:
                     }
                 }
             }
+            // cout<<endl;
         }
-        for(auto x:visited){
-            cout<<x.first<<" "<<x.second<<endl;
-        }
+        // for(auto x:visited){
+        //     cout<<x.first<<" "<<x.second<<endl;
+        // }
         return visited[destination];
     }
 };
 
 
 int main() {
-    int vertex,edges;
-    cin>>vertex>>edges;
-
-    Graph<int> g(vertex);
-    for(int i=0;i<edges;i++){
-        int x,y,wt;
-        cin>>x>>y>>wt;
-        g.addEdge(x,y,wt,true);
-    }
-    int a,b;
-    cin>>a>>b;
-    int shortestPath = g.dijkstra(a,b);
-    cout<<"Shortest path from node "<<a<<" to node "<<b<<": "<<shortestPath<<endl;
+	int t;
+	cin>>t;
+	while(t--){
+	    int vertex,edges;
+	    cin>>vertex>>edges;
+	
+	    Graph<int> g(vertex);
+	    for(int i=0;i<edges;i++){
+	        int x,y,wt;
+	        cin>>x>>y>>wt;
+	        g.addEdge(x,y,wt,false);
+	    }
+	    int a,b;
+	    cin>>a>>b;
+	    int shortestPath = g.dijkstra(a,b);
+	    if(shortestPath!=INT_MAX)
+	    	cout<<shortestPath<<endl;
+	    else
+	    	cout<<"NO"<<endl;
+	}
     return 0;
 }
-
-//input
-//8 13
-//0 1 1
-//1 2 8
-//0 3 4
-//1 3 3
-//1 4 7
-//2 4 6
-//3 4 5
-//3 5 9
-//3 6 10
-//6 5 11
-//6 7 13
-//4 6 12
-//4 7 2
-//3 6
-
-
-//4 5
-//0 1 10
-//1 2 15
-//0 2 5
-//3 1 2
-//2 3 40
-//0 2
