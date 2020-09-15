@@ -31,6 +31,8 @@ void permute(string s,vector<int> cnt,vector<char> result,int level)
     }
 }
 
+
+
 int main()
 {
     string s="abcd";
