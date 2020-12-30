@@ -1,36 +1,21 @@
-#include <bits/stdc++.h>
-#define ll long long
-using namespace std;
-
-void solve(){
-    int n;
-    cin>>n;
-    vector<int> a(n);
-    for(int i=0;i<n;i++)
-        cin>>a[i];
-    int x=a[n-1];
-    for(int i=n-1;i>0;i--){
-        a[i]=a[i-1];
-    }
-    a[0]=x;
-    for(auto c:a)
-        cout<<c<<" ";
-    cout<<endl;
-}
-
-
-
-int main() {
- 
-    // #ifndef ONLINE_JUDGE    
-    //     freopen("input.txt","r",stdin);
-    //     freopen("output.txt","w",stdout);
-    // #endif
-
-    int t;
-    cin>>t;
-    while(t--){
-    	solve();
-    }
-}
-
+// Function to find subarray with maximum sum
+// arr: input array
+// n: size of array
+int maxSubarraySum(int arr[], int n){
+    
+    
+    int local=0;
+    int global = 0;
+    int sum = INT_MIN;
+    for(int i=0;i<n;i++){
+        
+        local = arr[i];
+        global = global + arr[i];
+        if(local > global)
+            global = local;
+            
+        sum = max(sum,global);
+   }
+   return sum;
+    
+    // Your code here
