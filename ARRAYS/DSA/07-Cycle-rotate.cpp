@@ -2,6 +2,7 @@
 #define ll long long
 using namespace std;
 
+
 void solve(){
     int n;
     cin>>n;
