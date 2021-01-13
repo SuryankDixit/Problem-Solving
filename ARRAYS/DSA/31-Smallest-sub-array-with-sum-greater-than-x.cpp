@@ -1,5 +1,4 @@
 
-
 int sb(int arr[], int n, int x)
 {
     // Your code goes here   
