@@ -16,7 +16,6 @@ public:
             else
                 start=mid+1;
         }
-        
         int lowest_index=start;
         start=0;
         end=nums.size()-1;
