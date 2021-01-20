@@ -1,6 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
 
 int n1,n2,n3;
-
 bool func(string a,string b,string c,int i,int j,int k,int dp[][105]){
     if(i==n1 &&j==n2 &&k==n3){
         dp[i][j]=1;
@@ -31,7 +32,6 @@ bool func(string a,string b,string c,int i,int j,int k,int dp[][105]){
     dp[i][j]=0;
     return false;
 }
-
 
 /*You are required to complete this method */
 bool isInterleave(string a, string b, string c) 
