@@ -18,10 +18,10 @@ void permute(string &s,int i){
 
 int main()
 {
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt","r",stdin);
+    // freopen("output.txt","w",stdout);
+    // #endif
     
     string s="abc";
     // cout<<s[3]<<" ";
