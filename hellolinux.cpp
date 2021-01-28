@@ -1,8 +1,7 @@
-#include<iostream>
+#include<bits/stdc++.h>
 uisng namespace std;
 
-int main()
-{
+int main(){
 	cout<<"HELLO LINUX.";
 	return 0;
 }
