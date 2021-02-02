@@ -20,10 +20,6 @@ struct node* newNode (int data)
     return temp; 
 } 
   
-/* A recursive function to create a Binary Tree from given pre[] 
-   preLN[] arrays. The function returns root of tree. index_ptr is used 
-   to update index values in recursive calls. index must be initially 
-   passed as 0 */
 struct node *constructTreeUtil(int pre[], char preLN[], int *i, int n) 
 { 
     
@@ -45,8 +41,6 @@ struct node *constructTreeUtil(int pre[], char preLN[], int *i, int n)
 // A wrapper over constructTreeUtil() 
 struct node *constructTree(int pre[], char preLN[], int n) 
 { 
-    // Initialize index as 0. Value of index is used in recursion to maintain 
-    // the current index in pre[] and preLN[] arrays. 
     int index = 0; 
   
     return constructTreeUtil (pre, preLN, &index, n); 
