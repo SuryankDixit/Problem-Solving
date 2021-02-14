@@ -1,6 +1,6 @@
+#include<bits/stdc++.h>
 
-/* Node structure  used in the program
-
+//Node structure  used in the program
 struct Node{
 	int data;
 	struct Node * next;
@@ -13,7 +13,7 @@ struct Node{
 	}
 	
 };
-*/
+
 
 /*  Function which returns the  root of 
     the flattened linked list. */
@@ -33,45 +33,45 @@ struct Node{
 
 Node* dummy = new Node(-1);
 
-void merge(Node* temp){
-  
+void merge(Node* l2){
     
-    Node* head=dummy->bottom,*l1=head,*l2=temp;
     
-    if(l1->data>l2->data)
-        {
-            dummy->bottom=l2;
-            head=l2;
+    Node* l1 = dummy->bottom;
+    Node* temp = dummy;
+    if(l1&&!l2)
+        return;
+    if(l2&&!l1)
+        return;
+    
+    while(l1&&l2){
+        if(l1->data==l2->data){
+            temp->bottom = l1;
+            l1=l1->bottom;
+            temp->bottom->bottom = l2;
             l2=l2->bottom;
+            temp=temp->bottom->bottom;
+        }else if(l1->data < l2->data){
+            temp->bottom= l1;
+            l1=l1->bottom;
+            temp=temp->bottom;
+        }else{
+            temp->bottom= l2;
+            l2=l2->bottom;
+            temp=temp->bottom;
         }
-        else
-        {
-            dummy->bottom=l1;
-            head=l1;
-            l1=l1->bottom;;
-        }
-    
-    
-    
-    while(l1 and l2)
-    {
-        if(l1->data>l2->data)
-            {
-                head->bottom=l2;
-                l2=l2->bottom;
-            }
-            else
-            {
-                head->bottom=l1;
-                l1=l1->bottom;
-            }
-            head=head->bottom;
     }
-    if(l1)
-        head->bottom=l1;
-    else
-        head->bottom=l2;
-    
+    while(l1){
+        temp->bottom= l1;
+        l1=l1->bottom;
+        temp=temp->bottom;
+    }
+    while(l2){
+        temp->bottom= l2;
+        l2=l2->bottom;
+        temp=temp->bottom;
+    }
+    temp->bottom = nullptr;
+    return;
 }
 
     
