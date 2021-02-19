@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
 bool compare(string &a,string &b){
@@ -19,10 +18,7 @@ bool compare(string &a,string &b){
 									              	// return false if condition false means a should comes after b;
 }
 
-int main()
-{
-
-
+int main(){	
 	int n;
 	cin>>n;
 	vector<string> v(n);
@@ -34,5 +30,4 @@ int main()
 	for(auto i:v)
 		cout<<i<<endl;
 	return 0;
-
 }
