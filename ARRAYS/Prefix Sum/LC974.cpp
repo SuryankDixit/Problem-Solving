@@ -1,8 +1,6 @@
 class Solution {
 public:
-    int subarraysDivByK(vector<int>& A, int K) {
-        
-        
+    int subarraysDivByK(vector<int>& A, int K) { 
         int n = A.size();
         vector<int> ps(n+1,0);
         for(int i=1;i<=n;i++){
