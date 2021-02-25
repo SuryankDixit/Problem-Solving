@@ -12,6 +12,8 @@ One possible longest palindromic subsequence is "bbbb".
 */
 
 
+#include<bits/stdc++.h>
+using namespace std;
 
 class Solution {
 public:
