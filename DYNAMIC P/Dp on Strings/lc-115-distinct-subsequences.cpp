@@ -9,14 +9,11 @@ public:
         
         vector<vector<ll>> dp(n2,vector<ll>(n1,0));
         
-        for(int i=1;i<n1;i++){
-            if(t[0]==s[i-1])
-                dp[1][i]=dp[1][i-1]+1;
-            else{
-                dp[1][i]=dp[1][i-1];
-            }
-        }
-        for(int i=2;i<n2;i++){
+        // "" "" have 1 subsequence in common;
+        for(int i=0;i<n1;i++)
+            dp[0][i]=1;
+        
+        for(int i=1;i<n2;i++){
             for(int j=1;j<n1;j++){
                 if(s[j-1] != t[i-1])
                     dp[i][j]=dp[i][j-1];
