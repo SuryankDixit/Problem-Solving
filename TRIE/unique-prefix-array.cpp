@@ -60,7 +60,7 @@ class Trie{
                 temp = temp->children[ch];
                 ans.push_back(ch);
                 if(temp->cnt==1){
-                    cout<<endl;
+                    // cout<<endl;
                     return ans;
                 }
             }
