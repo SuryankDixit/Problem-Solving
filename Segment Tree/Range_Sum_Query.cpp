@@ -13,6 +13,12 @@
 // update(1, 2)
 // sumRange(0, 2) -> 8
 
+#include <bits/stdc++.h>
+#define ll long long
+
+using namespace std;
+
+
 class NumArray {
 public:
     vector<int> tree;
