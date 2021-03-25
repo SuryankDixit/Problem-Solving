@@ -1,9 +1,7 @@
-#include <iostream>
-using namespace std;
+#include<bits/stdc++.h>
+uisng namespace std;
 
-int main()
-{
-	cout<<"Welcome to Linux Terminal Git.(modified)";
-	cout<<"Modifying from VS code.";
+int main(){
+	cout<<"HELLO LINUX.";
 	return 0;
 }
