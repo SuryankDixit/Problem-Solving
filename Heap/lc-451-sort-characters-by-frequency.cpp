@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     typedef pair<char,int> pi;
@@ -31,3 +34,21 @@ public:
         return ans;
     }
 };
+
+
+
+// class Solution {
+// public:
+//     string frequencySort(string s) {
+//         unordered_map<char,int> m;
+//         for(auto x:s)
+//             m[x]++;
+        
+//         sort(s.begin(),s.end(),[&](char a,char b){
+//             if(m[a]>m[b] || (m[a]==m[b] && a<b))
+//                 return true;
+//             return false;
+//         });
+//         return s;
+//     }
+// };
