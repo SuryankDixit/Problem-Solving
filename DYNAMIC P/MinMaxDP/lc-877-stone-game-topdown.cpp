@@ -25,3 +25,27 @@ public:
         return alex > (sum - alex);
     }
 };
+
+
+class Solution {
+public:
+    int dp[501][501][2];
+    
+    int dfs(int l, int r,int turn,vector <int> &v) {
+        if(l>=r) return 0;
+        
+        if(dp[l][r][turn] != -1) return dp[l][r][turn];
+        
+        if(turn==0){
+            dp[l][r][turn] = max((v[l]+dfs(l+1,r,1-turn,v)),(v[r]+dfs(l,r-1,1-turn,v)));
+        }else{
+            dp[l][r][turn] = min((-v[l]+dfs(l+1,r,1-turn,v)),(-v[r]+dfs(l,r-1,1-turn,v)));
+        }
+        return dp[l][r][turn];
+    }
+    bool stoneGame(vector<int>& piles) {
+        int l = 0, r = piles.size()-1;
+        memset(dp, -1, sizeof(dp));
+        return (dfs(l,r,0,piles)>=0);
+    }
+};
