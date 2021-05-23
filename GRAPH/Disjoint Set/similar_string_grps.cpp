@@ -24,6 +24,11 @@ Example 1:
 Input: A = ["tars","rats","arts","star"]
 Output: 2
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
 class Solution {
 public:
     
