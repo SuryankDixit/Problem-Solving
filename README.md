@@ -10,7 +10,7 @@ Also, this repo will be updated with new solutions and resources from time to ti
 
 Algorithms and data structures are not language-specific (it's true that some languages are faster, and some are easier to use), but if you are good with the logic and pseudocode, any language would be good.\
 So I've decided to use [C++/C](https://en.cppreference.com/w/)\
-So, to execute these solutions there is no need from installing any external packages. \
+So, to execute these solutions there is no need from installing any external packages. Most of the links to the respective questions are either added in the code as comment or as a commit message
 
 *Note that I'm **not** the author of these problems, they are from sites like [LeetCode](https://leetcode.com/) (you can find more than 40 sites like this in the [Training Sites](#Training-Sites) section). **Only** the solutions and explanations are mine. If you find any **bug** or incorrect implementation (or faster/better implementation) in this repo, please let me know by opening an issue or pull request.*
 
@@ -21,12 +21,22 @@ Each solution/problem in this repo belongs to one of these categories:
 
 1. [Graph](https://github.com/SuryankDixit/Problem-Solving/tree/master/GRAPH) -DFS,BFS, Shortes Paths, Cycles,Euler Tour, Spanning Trees, Bipartite Graphs, Strongly Connected Components, Topological Sorting etc.
 2. [Dynamic Programming](https://github.com/SuryankDixit/Problem-Solving/tree/master/DYNAMIC%20P) - 3D, 2D and 1D Dynamic Programming, LCS, LIS, Knapsack, MCM, DP on Tress , DP on Strings etc.
-3. [Arrays](https://github.com/SuryankDixit/Problem-Solving/tree/master/ARRAYS) - Array Manipulations, Sorting, Prefix Sum, Sliding Window, etc.
-4. [Linked Lists](https://github.com/SuryankDixit/Problem-Solving/tree/master/LINKED%20LIST) - Linked List Searching, Pointer Manipulations, etc.
-5. [Trees](https://github.com/SuryankDixit/Problem-Solving/tree/master/TREE) - Binary Search Trees, Tree Traversals: Breadth-First (Level Order) Traversal, Depth-First Traversal (Inorder, Preorder, Postorder),Successors, Forest, Sum Tress, LCA etc.
-6. [Recursion and Backtracking](https://github.com/SuryankDixit/Problem-Solving/tree/master/RECURSION%20%2B%20BACKTRACKING) - Permutations,Combinations, Sudoku Solver, N-Queens
-7. [Math](https://github.com/SuryankDixit/Problem-Solving/tree/master/MATHS) - Combinatorics, Prime,GCD, LCM, Factorization, Geometry, Math Formulas, etc.
-8. [Other](https://github.com/MTrajK/coding-problems/tree/master/Other) - Backtracking, BFS, DFS, Stacks, Queues, Deques, Priority Queues (Heaps), Matrices, etc.
+3. [Segment Tree](https://github.com/SuryankDixit/Problem-Solving/tree/master/Segment%20Tree) Implementation, Range Query.
+4. [Trie](https://github.com/SuryankDixit/Problem-Solving/tree/master/TRIE) Implementation, Unique Prefix Array, Max Xor Pairs.
+5. [Arrays](https://github.com/SuryankDixit/Problem-Solving/tree/master/ARRAYS) - Array Manipulations, Sorting, Prefix Sum, Sliding Window, etc.
+6. [Linked Lists](https://github.com/SuryankDixit/Problem-Solving/tree/master/LINKED%20LIST) - Linked List Searching, Pointer Manipulations, etc.
+7. [Trees](https://github.com/SuryankDixit/Problem-Solving/tree/master/TREE) - Binary Search Trees, Tree Traversals: Breadth-First (Level Order) Traversal, Depth-First Traversal (Inorder, Preorder, Postorder),Successors, Forest, Sum Tress, LCA etc.
+8. [Recursion and Backtracking](https://github.com/SuryankDixit/Problem-Solving/tree/master/RECURSION%20%2B%20BACKTRACKING) - Permutations,Combinations, Sudoku Solver, N-Queens
+9. [Math](https://github.com/SuryankDixit/Problem-Solving/tree/master/MATHS) - Combinatorics, Prime,GCD, LCM, Factorization, Geometry, Math Formulas, etc.
+10. [Binary Search](https://github.com/SuryankDixit/Problem-Solving/tree/master/BINARY%20SEARCH)
+11. [Sorting](https://github.com/SuryankDixit/Problem-Solving/tree/master/SORTING) Bubble, Insertion,Merge, Quick Sort etc.
+12. [Heap](https://github.com/SuryankDixit/Problem-Solving/tree/master/Heap)
+13. [HashTable](https://github.com/SuryankDixit/Problem-Solving/tree/master/HashTable)
+14. [Stacks](https://github.com/SuryankDixit/Problem-Solving/tree/master/STACKS)
+15. [Greedy](https://github.com/SuryankDixit/Problem-Solving/tree/master/GREEDY)
+16. [Euler Project Solution](https://github.com/SuryankDixit/Problem-Solving/tree/master/Euler%20Project%20Solutions)
+17. [Bitwise Operations](https://github.com/SuryankDixit/Problem-Solving/tree/master/BITWISE%20OPERATIONS)
+18. [Other](https://github.com/SuryankDixit/Problem-Solving/tree/master/DSA-Sheet) -Arrays, Matrices,Searching ,Sorting, String.
 
 
 ## Learning Resources
