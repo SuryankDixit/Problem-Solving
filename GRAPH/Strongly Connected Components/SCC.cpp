@@ -86,3 +86,61 @@ int main() {
 //9 11
 //9 7
 //10 6
+
+
+
+
+// class Solution
+// {
+// 	public:
+	
+	
+// 	void storeOrderingOfNodes(int node,vector<int> &visited,vector<int> &order,vector<int> graph[]){
+//         visited[node]=1;
+//         for(auto child: graph[node]){
+//             if(!visited[child])
+//                 storeOrderingOfNodes(child,visited,order,graph);
+//         }
+//         order.push_back(node);
+//     }
+
+//     void getConnectedComponents(int node,vector<int> &visited2, int &color,vector<int> reversedGraph[]){
+//         visited2[node]=1;
+//     //    cout<<node<<"=>";
+//         for(auto child: reversedGraph[node]){
+//     //        cout<<child<<",";
+//             if(!visited2[child]){
+//                 getConnectedComponents(child,visited2,color,reversedGraph);
+//             }
+//         }
+//         // components[color].push_back(node);
+// }
+	
+// 	int kosaraju(int N, vector<int> graph[])
+//     {
+//         vector<int> visited1(N,0);
+//         vector<int> visited2(N,0);
+//         vector<int> order;
+//         vector<int> reversedGraph[N];
+        
+//         for(int i=0;i<N;i++){
+//             for(auto y:graph[i]){
+//                 reversedGraph[y].push_back(i);
+//             }
+//         }
+        
+//         for(int i=0;i<N;i++){
+//             if(!visited1[i]){
+//                 storeOrderingOfNodes(i,visited1,order,graph);
+//             }
+//         }
+//         int color=0;
+//         for(int i=N-1;i>=0;i--){
+//             if(!visited2[order[i]]){
+//                 getConnectedComponents(order[i],visited2,color,reversedGraph);
+//                 color++;
+//             }
+//         }
+//         return color;
+//     }
+// };
