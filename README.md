@@ -81,7 +81,6 @@ Collection of free courses from one of the best CS universities.
     - [Design and analysis of algorithms - 6.046J](https://www.youtube.com/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp) - *[Official MIT page with resources](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm)*
     - [Advanced Data Structures - 6.851](https://www.youtube.com/playlist?list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf) - *[Official MIT page with resources](http://courses.csail.mit.edu/6.851/spring14/lectures/)*
     - [Advanced Algorithms 2016 - 6.854](https://www.youtube.com/playlist?list=PL6ogFv-ieghdoGKGg2Bik3Gl1glBTEu8c) - *[Official MIT page with resources](http://people.csail.mit.edu/moitra/854.html)*
-    - [Programming for the Puzzled 2018 - 6.S095](https://www.youtube.com/playlist?list=PLUl4u3cNGP62QumaaZtCCjkID-NgqrleA) - *[Official MIT page with resources](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s095-programming-for-the-puzzled-january-iap-2018/)*
 
 5. Harvard University
     - [Advanced algorithms - CS224](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uP4rJgf5ayhHWgw7akUWSf)
