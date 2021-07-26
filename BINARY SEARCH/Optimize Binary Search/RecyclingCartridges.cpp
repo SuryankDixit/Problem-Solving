@@ -57,3 +57,51 @@ int32_t main()
     }
     cout<<"The max perks which we can buys is " << lo;
 }
+
+
+
+/*
+#include <bits/stdc++.h>
+using namespace std;
+
+int Cartridges, Dollars, recycleReward, perksCost;
+
+bool possible(int x)
+{
+	long long int extra_dollars_needed = x*1ll*perksCost-Dollars;
+	if(extra_dollars_needed > Cartridges*1ll*recycleReward)	return false;
+	if(extra_dollars_needed<0)  extra_dollars_needed=0;
+	Cartridges-=(extra_dollars_needed/recycleReward)+(extra_dollars_needed%recycleReward!=0);
+	
+	if(Cartridges>=x)	return true;
+	else				return false;
+}
+
+int main()
+{
+	cin>>Cartridges>>Dollars>>recycleReward>>perksCost;
+	
+	int low = 0;		//the minimum possible perks
+	int hig = 1e9+1;	//the maximum possible perks
+	
+	while(low+1<hig)
+	{
+		int mid = (low+hig);
+		mid = mid>>1;
+		
+		if(possible(mid))
+		{
+			low=mid;
+		}
+		else
+		{
+			hig=mid;
+		}
+		
+		//cout<<low<<" "<<hig<<endl;
+	}
+	
+	if(possible(low+1))		cout<<low+1<<endl;
+	else					cout<<low<<endl;
+}
+*/
