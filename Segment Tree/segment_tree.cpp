@@ -3,16 +3,16 @@
 
 using namespace std;
 
-void buildTree(vector<int> &tree,vector<int> &v,int l,int r,int idx){
+void buildTree(vector<int> &tree,vector<int> &v,int nl,int nr,int idx){
 
-	if(l==r){
-		tree[idx]=v[l];
+	if(nl==nr){
+		tree[idx]=v[nl];
 		return;
 	}
 
-	int mid=(l+r)/2;
-	buildTree(tree,v,l,mid,2*idx+1);
-	buildTree(tree,v,mid+1,r,2*idx+2);
+	int mid=(nl+nr)/2;
+	buildTree(tree,v,nl,mid,2*idx+1);
+	buildTree(tree,v,mid+1,nr,2*idx+2);
 	tree[idx]=min(tree[2*idx+1],tree[2*idx+2]);
 	return;
 }
