@@ -70,7 +70,8 @@ class Trie{
 
 int main(){
     Trie t;
-    vector<string> v{"dogs","zebra","cobra","cobras","dog", "duck", "dove"};
+    // vector<string> v{"dogs","zebra","cobra","cobras","dog", "duck", "dove"};
+    vector<string> v{"zebra", "dog", "dogg", "duck", "dove"};
     vector<string> ans;
     for(int i=0;i<v.size();i++){
         t.insert(v[i]);
