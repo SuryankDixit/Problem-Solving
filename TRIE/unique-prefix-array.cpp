@@ -11,6 +11,13 @@ Input: arr[] =  {"geeksgeeks", "geeksquiz", "geeksforgeeks"};
 Output: {geeksf, geeksg, geeksq}
 */
 
+/*
+    Cretae Trie: O(N*k)
+    Insert: O(k)
+    Search: O(k)
+    LookUp for all Words: O(N*k)
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
